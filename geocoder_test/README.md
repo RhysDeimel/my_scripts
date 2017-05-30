@@ -16,3 +16,12 @@ $ python3 geocoder_test.py
 $ python geocoder_requests.py
 {'lng': 151.2068173, 'lat': -33.8647516}
 ```
+
+
+## geocoder_raw
+> Using raw HTTP to achieve the same results
+
+```
+$ python geocoder_raw.py
+{'lat': -33.8647516, 'lng': 151.2068173}
+```
