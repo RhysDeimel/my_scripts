@@ -8,3 +8,4 @@ Repository for various small scripts I have written
 - `sms_troll` - Using clockwork API, sends the lines of Bohemian Rhapsody one line at a time in 5~10 minute intervals
 - `toTitle` - Takes whatever text is on the clipboard, and returns it in title case.
 - `udp_tictactoe` - A quick experiment in using python sockets for a small project, in this case, commandline tic-tac-toe!
+- `wake_on_lan` - Will wake a networked computer that has WOL enabled.
