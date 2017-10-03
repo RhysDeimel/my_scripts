@@ -8,7 +8,7 @@ $ python3 geocoder_test.py
 (-33.8647516, 151.2068173)
 ```  
 
-<br/>
+
 ## geocoder_requests
 > Same thing, but using requests to access google API
 
@@ -17,7 +17,7 @@ $ python geocoder_requests.py
 {'lng': 151.2068173, 'lat': -33.8647516}
 ```  
 
-<br/>
+
 ## geocoder_raw
 > Using raw HTTP to achieve the same results
 
@@ -26,9 +26,10 @@ $ python geocoder_raw.py
 {'lat': -33.8647516, 'lng': 151.2068173}
 ```
 
-<br/>
+
 ## geocoder_network
 > Raw network conversation with google API
+
 ```
 $ python geocoder_network.py
 HTTP/1.1 200 OK
