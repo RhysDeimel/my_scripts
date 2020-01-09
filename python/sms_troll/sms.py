@@ -3,7 +3,7 @@ import time
 import random
 import logging
 
-logging.basicConfig(filename='status.log', level=logging.INFO)
+logging.basicConfig(filename="status.log", level=logging.INFO)
 
 api = clockwork.API("SECRET_KEY_HERE")
 

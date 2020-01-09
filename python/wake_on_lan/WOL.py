@@ -6,7 +6,7 @@ import socket
 from sys import argv
 
 
-def WOL(mac_addr, port=9, network='<broadcast>'):
+def WOL(mac_addr, port=9, network="<broadcast>"):
     """
     From Wikipedia:
     The magic packet is a broadcast frame containing anywhere within
@@ -22,21 +22,20 @@ def WOL(mac_addr, port=9, network='<broadcast>'):
     """
 
     if len(mac_addr) != 17:
-        raise ValueError('Incorrect MAC address format ',
-                         '(use XX:XX:XX:XX:XX:XX).')
+        raise ValueError("Incorrect MAC address format ", "(use XX:XX:XX:XX:XX:XX).")
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
-    mac_addr_packet = mac_addr.replace(':', ' ')
+    mac_addr_packet = mac_addr.replace(":", " ")
     mac_addr_packet = bytearray.fromhex(mac_addr_packet) * 16
 
-    magic_packet = bytearray.fromhex('FF FF FF FF FF')
+    magic_packet = bytearray.fromhex("FF FF FF FF FF")
     magic_packet += mac_addr_packet
 
     sock.sendto(magic_packet, (network, port))
-    print('Magic packet sent!')
+    print("Magic packet sent!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     WOL(argv[1])
